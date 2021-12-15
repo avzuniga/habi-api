@@ -48,6 +48,7 @@ Diagrama Entidad Relacion
 
 Codigo SQL para agregar likeit_history
 
+```
 CREATE TABLE IF NOT EXISTS `habi_db`.`likeit_history` (
   `idlikeit_history` INT NOT NULL,
   `auth_user_id` INT(11) NOT NULL,
@@ -66,8 +67,7 @@ CREATE TABLE IF NOT EXISTS `habi_db`.`likeit_history` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
-
-
+```
 
 
 
