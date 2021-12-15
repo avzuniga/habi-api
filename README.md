@@ -7,9 +7,14 @@ clone the project
 
 cd project folder
 
+```
 pip install -r requirements.txt
 
+```
+```
 uvicorn main:app --port 8089 --reload
+```
+
 
 Then go to http://127.0.0.1:8089/docs
 
