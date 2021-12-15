@@ -39,6 +39,35 @@ property
 status
 
 
+Segundo ejercicio:
+
+Diagrama Entidad Relacion
+
+![Alt text](./image/likeit.png "EER")
+
+
+Codigo SQL para agregar likeit_history
+
+CREATE TABLE IF NOT EXISTS `habi_db`.`likeit_history` (
+  `idlikeit_history` INT NOT NULL,
+  `auth_user_id` INT(11) NOT NULL,
+  `property_id` INT(11) NOT NULL,
+  PRIMARY KEY (`idlikeit_history`),
+  INDEX `fk_likeit_history_auth_user1_idx` (`auth_user_id` ASC) VISIBLE,
+  INDEX `fk_likeit_history_property1_idx` (`property_id` ASC) VISIBLE,
+  CONSTRAINT `fk_likeit_history_auth_user1`
+    FOREIGN KEY (`auth_user_id`)
+    REFERENCES `habi_db`.`auth_user` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_likeit_history_property1`
+    FOREIGN KEY (`property_id`)
+    REFERENCES `habi_db`.`property` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB
+
+
 
 
 

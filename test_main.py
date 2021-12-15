@@ -15,3 +15,6 @@ def test_connect():
 def test_get_property():
     response = client.get('http://127.0.0.1:8089/property/')
     assert  'results' in response.json()
+    
+    
+    
